@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/editText_ip"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="192.168.1.35"
+        android:hint="IP" />
+
+    <EditText
+        android:id="@+id/editText_port"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/editText_ip"
+        android:text="3131"
+        android:hint="Port" />
+    
+    <Button 
+        android:id="@+id/button_connect"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/editText_port"
+        android:onClick="connectEvent"
+        android:text="Connect"/>
+    
+    <TextView 
+        android:id="@+id/textView_status"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/button_connect"
+        android:text="Ready"
+        />
+    
+    <TextView 
+        android:id="@+id/textView_chatLog"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@android:color/holo_blue_bright"
+        android:layout_below="@+id/textView_status"
+        android:scrollHorizontally="true"
+        />
+    
+    
+    <LinearLayout
+        android:id="@+id/linear_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/editText_userInput"
+            android:layout_width="0dp"
+            android:layout_height="50dp" 
+            android:layout_weight="9"/>
+
+        <Button
+            android:id="@+id/button_send"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:onClick="sendEvent"
+            android:layout_weight="2"
+            android:text=">" />
+        
+    </LinearLayout>
+    
+</RelativeLayout>
