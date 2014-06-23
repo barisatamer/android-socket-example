@@ -105,7 +105,6 @@ public class ServerGUI extends JFrame{
 			SwingUtilities.invokeLater(new Runnable() {
 				@Override
 				public void run() {
-					updateChatText(value, from);
 				}
 			});
 		}
